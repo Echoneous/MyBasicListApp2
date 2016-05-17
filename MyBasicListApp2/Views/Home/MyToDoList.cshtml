@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MyBasicListApp2.Models.DB.tblBasicList>
+
+@{
+    ViewBag.Title = "MyToDoList";
+}
+
+<div class="container forMyList">
+    <div class="myList">
+    <h2>My ToDo List</h2>
+        <table class="toDoListTable">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.InputDate)
+                    <hr />
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InputItem)
+                    <hr />
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InputImportance)
+                    <hr />
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemCompletion)
+                    <hr />
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InputDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InputItem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InputImportance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemCompletion)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "List", new { id=item.BasicListID }, new { @class = "crud" }) |
+                    @Html.ActionLink("Delete", "Delete", "List", new { id=item.BasicListID }, new { @class = "crud" })
+                </td>
+
+            </tr>
+        }
+        </table>
+    </div>
+</div>
+<div class="addMoreSection">
+    <a href="@Url.Action("ToDoList", "list")" class="button">Add More Items</a>
+</div>
+

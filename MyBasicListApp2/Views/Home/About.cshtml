@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "About My Applciation";
+}
+
+<table class="aboutMeRow">
+    <tr>
+        <td class="aboutMe">
+            <div class="description">
+                <h2>@ViewBag.Title</h2>
+                <hr />
+                <p>This application is a very simple concept I am using to learn more
+                about the overall structure and functionality of MVC. If you click on the
+                "My List" navigation link you will be taken to the to do list portion of 
+                the application where you can track, add, edit, delete things that you 
+                are trying to remember to get done.</p>
+                <br />
+                <p>Coming soon: User profiles for individual to do lists</p>
+            </div>
+            <div class="image">
+                <div><h4>Built by this guy! Also his dog was there!</h4></div>
+                <img src="~/Content/Images/abaoutMe.jpg" width="400" height="250"/>
+            </div>
+        </td>
+        <td class="aboutMeImage">
+            <img src="~/Content/Images/aboutMeImage.jpg" alt="about-me-image" width="600" height="900" />
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MyBasicListAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblBasicList">
+    <Key>
+      <PropertyRef Name="BasicListID" />
+    </Key>
+    <Property Name="BasicListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InputDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="InputItem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InputImportance" Type="Int32" Nullable="false" />
+    <Property Name="ItemCompletion" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="MyBasicListAppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBasicLists" EntityType="Self.tblBasicList" />
+  </EntityContainer>
+</Schema>

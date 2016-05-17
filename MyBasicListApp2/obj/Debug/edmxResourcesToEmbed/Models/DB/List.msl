@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MyBasicListAppModelStoreContainer" CdmEntityContainer="MyBasicListAppEntities">
+    <EntitySetMapping Name="tblBasicLists">
+      <EntityTypeMapping TypeName="MyBasicListAppModel.tblBasicList">
+        <MappingFragment StoreEntitySet="tblBasicList">
+          <ScalarProperty Name="BasicListID" ColumnName="BasicListID" />
+          <ScalarProperty Name="InputDate" ColumnName="InputDate" />
+          <ScalarProperty Name="InputItem" ColumnName="InputItem" />
+          <ScalarProperty Name="InputImportance" ColumnName="InputImportance" />
+          <ScalarProperty Name="ItemCompletion" ColumnName="ItemCompletion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

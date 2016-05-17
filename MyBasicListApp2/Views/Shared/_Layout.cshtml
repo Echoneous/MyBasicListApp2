@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid navHolder">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/Content/Images/footerIcon.png" width="200" height="60" />
+                
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("My List", "MyToDoList", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    @*<div class="container-fluid fullNavBar">
+        <div class="logo">
+            <img src="~/Content/Images/footerIcon.png" width="200" height="60" />
+        </div>
+        <div class="list">
+            <ul class="NavBarList">
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                <li>@Html.ActionLink("My List", "MyToDoList", "Home")</li>
+            </ul>
+        </div>
+    </div>
+    *@
+    <div class="container-fluid body-content">
+        @RenderBody()
+    </div>
+    <footer class="container-fluid">
+        <div class="row topFooter">
+          <table>
+              <tr>
+                  <td>
+                      <h5>Mission Statement</h5>
+                      <hr />
+                      <div>
+                          <p>I have absolutely nothing to</p>
+                          <p>say here. I just wanted to include</p>
+                          <p>table columns in the footer for</p>
+                          <p>practice.</p>
+                          <p>dogs</p>
+                          <p>lemonade</p>
+                          <p>rought stuff</p>
+                      </div>
+                  </td>
+                  <td>
+                      <h5>Connect With Me</h5>
+                      <hr />
+                      <div>
+                          <p>Social Media connections</p>
+                          <a href="">Facebook</a><br />
+                          <a href="">LinkedIn</a><br />
+                          <a href="">Twitter</a><br />
+                          <a href="">Instagram</a><br />
+                          <a href="">Snap Chat</a><br />
+                          <a href="">Go Fund Me</a><br />
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </td>
+                  <td>
+                      <h5>Contact ME</h5>
+                      <hr />
+                      <div>
+
+                      </div>
+                  </td>
+                  <td>
+                      <h5>Blog</h5>
+                      <hr />
+                      <div>
+
+                      </div>
+                  </td>
+              </tr>
+          </table>
+        </div>
+        <div class="row bottomFooter">
+            <p>&copy; @DateTime.Now.Year - My To Do List</p>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
