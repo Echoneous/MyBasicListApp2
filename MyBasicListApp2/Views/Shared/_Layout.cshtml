@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -30,21 +30,6 @@
         </div>
     </div>
 
-
-    @*<div class="container-fluid fullNavBar">
-        <div class="logo">
-            <img src="~/Content/Images/footerIcon.png" width="200" height="60" />
-        </div>
-        <div class="list">
-            <ul class="NavBarList">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("About", "About", "Home")</li>
-                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                <li>@Html.ActionLink("My List", "MyToDoList", "Home")</li>
-            </ul>
-        </div>
-    </div>
-    *@
     <div class="container-fluid body-content">
         @RenderBody()
     </div>
@@ -62,7 +47,6 @@
                           <p>practice.</p>
                           <p>dogs</p>
                           <p>lemonade</p>
-                          <p>rought stuff</p>
                       </div>
                   </td>
                   <td>
@@ -73,6 +57,7 @@
                           <a href="">Facebook</a><br />
                           <a href="">LinkedIn</a><br />
                           <a href="">Twitter</a><br />
+                          <br />
                           <a href="">Instagram</a><br />
                           <a href="">Snap Chat</a><br />
                           <a href="">Go Fund Me</a><br />
@@ -84,14 +69,26 @@
                       <h5>Contact ME</h5>
                       <hr />
                       <div>
-
+                          <p>There is already a contact page</p>
+                          <br />
+                          <br />
+                          <p>Space</p>
+                          <br />
+                          <a href="@Url.Action("Contact", "Home")">Right here</a>
+                          <br />
+                          <p>Just filling space</p>
                       </div>
                   </td>
                   <td>
                       <h5>Blog</h5>
                       <hr />
                       <div>
-
+                          <p>There is no blog</p>
+                          <p>Its something I want to try making.</p>
+                          <p>But now is not the time.</p>
+                          <p>Polar bears</p>
+                          <p>code stuff</p>
+                          <p>cell phones</p>
                       </div>
                   </td>
               </tr>
